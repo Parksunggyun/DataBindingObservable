@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="al.tong.mon.databindingobservable.ObservableItem" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/nameTxtView"
+            android:text="@{item.name}"
+            android:textSize="40sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            tools:text="asdasd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTxtView"
+            android:id="@+id/nickNameTxtView"
+            android:text="@{item.nickName}"
+            android:textSize="40sp"
+            tools:text="asdasd"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
